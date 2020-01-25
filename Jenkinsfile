@@ -6,7 +6,7 @@ node('master') {            //definition of job to be done
     }
 
     stage('Project Name') {
-        def projects = readJSON file: "${env.WORKSPACE}/input.json"
+        def projects = readJSON file: "${env.WORKSPACE}/jsonfile.json"
 
         echo "current workspace is ${env.WORKSPACE}"
         echo "Project name is ${projects.projects.project[0].name}"
