@@ -1,7 +1,7 @@
 //test comment
-node('master') {
-    stage('Git Clone') {
-        git branch: 'master', changelog: true, url: 'https://github.com/sanusatyadarshi/nmit.git'
+node('master') {            //definition of job to be done
+    stage('Git Clone') {    //seperation of the jobs to different stages for easier debugging
+        git branch: 'master', changelog: true, url: 'https://github.com/Janhavi23/Devops.git'
         sh "ls"
     }
 
